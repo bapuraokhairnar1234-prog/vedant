@@ -77,7 +77,7 @@
 <center>
   <a href="index.html">← Back to Home</a>
 </center>
-<!-- Order Form -->
+<!-- WhatsApp Order Section -->
 <div style="text-align:center; margin-top:30px;">
   <h2>Order Now</h2>
   <p>Enter how much you want and message us directly on WhatsApp!</p>
@@ -106,13 +106,15 @@ function sendToWhatsApp() {
   
   var message = "Hello, I want to buy " + quantity + " " + product + " from your farm.";
   
-  // replace YOURNUMBER with your WhatsApp number (without + or 0)
-  var phone = "91XXXXXXXXXX"; // example: 919876543210
+  // WhatsApp number (with 91 for India)
+  var phone = "918767405835";
   
   var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-  
   window.open(url, "_blank").focus();
 }
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
