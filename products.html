@@ -77,6 +77,42 @@
 <center>
   <a href="index.html">← Back to Home</a>
 </center>
+<!-- Order Form -->
+<div style="text-align:center; margin-top:30px;">
+  <h2>Order Now</h2>
+  <p>Enter how much you want and message us directly on WhatsApp!</p>
+  
+  <input type="number" id="quantity" placeholder="Enter quantity" style="padding:8px; width:200px;">
+  <select id="product" style="padding:8px; width:150px;">
+    <option value="eggs">Eggs</option>
+    <option value="chickens">Chickens</option>
+  </select>
+  
+  <br><br>
+  <button onclick="sendToWhatsApp()" style="padding:10px 20px; background-color:green; color:white; border:none; border-radius:5px; cursor:pointer;">
+    Order on WhatsApp
+  </button>
+</div>
 
+<script>
+function sendToWhatsApp() {
+  var quantity = document.getElementById("quantity").value;
+  var product = document.getElementById("product").value;
+  
+  if (quantity === "") {
+    alert("Please enter quantity");
+    return;
+  }
+  
+  var message = "Hello, I want to buy " + quantity + " " + product + " from your farm.";
+  
+  // replace YOURNUMBER with your WhatsApp number (without + or 0)
+  var phone = "91XXXXXXXXXX"; // example: 919876543210
+  
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  
+  window.open(url, "_blank").focus();
+}
+</script>
 </body>
 </html>
