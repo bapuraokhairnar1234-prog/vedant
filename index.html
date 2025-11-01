@@ -100,6 +100,17 @@
       margin-top: 50px;
     }
 
+    footer a {
+      color: #f5b400;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffcc33;
+    }
+
     .founder {
       background: #111;
       padding: 40px 20px;
@@ -177,33 +188,28 @@
   </div>
 
   <footer>
-    © 2025 Kaushalya Desi Farm | All rights reserved.
+    <a href="about.html">About Us</a> | © 2025 Kaushalya Desi Farm | All rights reserved.
   </footer>
 
   <script>
-function openForm(productName = '') {
-  document.getElementById('orderForm').style.display = 'block';
-  document.getElementById('product').value = productName;
-}
+    function orderNow(type) {
+      const phone = "918767405835"; // WhatsApp number (with country code)
+      const eggQty = document.getElementById('eggQty').value || 0;
+      const meatQty = document.getElementById('meatQty').value || 0;
+      let message = "Hello, I'd like to place an order: ";
 
-function sendOrder() {
-  const product = document.getElementById('product').value;
-  const quantity = document.getElementById('quantity').value;
-  const area = document.getElementById('area').value;
+      if (type === 'eggs' && eggQty > 0) {
+        message += eggQty + " eggs (₹10 each)";
+      } else if (type === 'meat' && meatQty > 0) {
+        message += meatQty + " kg meat (₹400 per kg)";
+      } else {
+        alert("Please enter quantity before ordering!");
+        return;
+      }
 
-  if (!quantity || !area) {
-    alert("Please enter quantity and area.");
-    return;
-  }
-
-  const message = `Hello! I would like to order ${quantity} of ${product}. Delivery area: ${area}.`;
-  const phone = "918767405835"; // your WhatsApp number
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-  // Opens WhatsApp directly
-  window.open(url, "_blank");
-}
-</script>
-
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
