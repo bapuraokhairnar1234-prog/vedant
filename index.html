@@ -47,34 +47,17 @@
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background: url('farm1.jpg') no-repeat center center;
-      background-size: cover;
-      color: #fff;
+      background-color: #e6f4e6;
     }
 
     .hero h2 {
       font-size: 36px;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 3px #000;
     }
 
     .hero p {
       font-size: 20px;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .cta-button {
-      background-color: #25D366;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
     }
 
     .section {
@@ -157,6 +140,19 @@
       margin-left: 8px;
     }
 
+    .cta-button {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
     .order-form input {
       padding: 10px;
       font-size: 16px;
@@ -168,9 +164,10 @@
     }
 
     footer {
-      background-color: #d4edda;
       text-align: center;
-      padding: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      margin-top: 30px;
       font-size: 14px;
       color: #666;
     }
@@ -209,15 +206,18 @@
   </header>
 
   <section class="hero" id="home">
-    <h2>Organic Gavran Eggs from Malegaon</h2>
+    <h2>India’s Trusted Source for Gavran Eggs</h2>
     <p>Fresh, nutritious, and delivered with care. ₹350 for 30 eggs – limited time offer!</p>
-    <a href="#order" class="cta-button">Place Your Order</a>
+    <img src="farm1.jpg" alt="Kaushalya Desi Eggs Farm" style="width:100%;border-radius:10px;margin-top:10px;">
+    <div style="text-align:center; margin-top:15px;">
+      <button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});" class="cta-button">📦 Order on WhatsApp</button>
+    </div>
   </section>
 
   <section class="section" id="founder">
     <h3>Meet Our Founder</h3>
     <div class="founder-container">
-      <img src="farm1.jpg" alt="Bapurao Khairnar" class="founder-photo" />
+      <img src="bapurao.jpg" alt="Bapurao Khairnar - Founder" class="founder-photo" />
       <div class="founder-text">
         <h4>Bapurao Khairnar</h4>
         <p>
@@ -246,12 +246,4 @@
         <h4>Farm Combo (60 Eggs)</h4>
         <p>Double the nutrition with our best-selling combo pack.</p>
         <p class="price">₹680</p>
-        <a class="cta-button" href="https://wa.me/918767405835?text=Hello%2C%20I%20want%20to%20buy%20the%20Farm%20Combo%20(60%20Eggs)%20for%20%E2%82%B9680." target="_blank">Buy Now</a>
-      </div>
-
-      <div class="product-card">
-        <img src="hen1.jpg" alt="Premium Hen Eggs" />
-        <h4>Premium Gavran Eggs (15 Pack)</h4>
-        <p>Hand-selected eggs with extra protein and taste.</p>
-        <p class="price">₹400</p>
-        <a class="cta-button" href="
+        <a class="cta-button" href="https://wa.me/918767405835?text=Hello%2C%20I%20want%20to%20buy%20the%20Farm%20Combo%20(60%20Eggs)%20for%20%E2%82%B9680." target="_blank">
