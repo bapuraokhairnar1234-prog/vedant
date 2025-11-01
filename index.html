@@ -9,20 +9,20 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #000000;
+      background-color: #3b0a45;
       color: #ffffff;
     }
 
     header {
       text-align: center;
       padding: 20px;
-      background-color: #1a1a1a;
+      background-color: #4c1158;
     }
 
     header h1 {
       font-size: 28px;
       margin: 0;
-      color: #6a0dad;
+      color: #d8c4f0;
     }
 
     .hero {
@@ -49,8 +49,8 @@
     }
 
     .cta-button {
-      background-color: #6a0dad;
-      color: white;
+      background-color: #d8c4f0;
+      color: #3b0a45;
       padding: 12px 20px;
       border: none;
       border-radius: 8px;
@@ -72,10 +72,11 @@
     }
 
     .product-card {
-      background-color: #1a1a1a;
+      background-color: #f3e9ff;
       border-radius: 12px;
       padding: 15px;
-      box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      color: #3b0a45;
     }
 
     .product-card img {
@@ -86,11 +87,11 @@
 
     .product-card h4 {
       margin: 10px 0 5px;
-      color: #6a0dad;
+      color: #4c1158;
     }
 
     .founder-section {
-      background-color: #111111;
+      background-color: #4c1158;
       padding: 30px 20px;
       text-align: center;
     }
@@ -99,21 +100,21 @@
       width: 80%;
       max-width: 300px;
       border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+      box-shadow: 0 4px 10px rgba(255,255,255,0.2);
       margin-bottom: 20px;
     }
 
     .founder-section h3 {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #6a0dad;
+      color: #d8c4f0;
     }
 
     .founder-section p {
       font-size: 17px;
       line-height: 1.7;
       padding: 0 10px;
-      color: #dddddd;
+      color: #f3e9ff;
     }
 
     .form-popup {
@@ -122,8 +123,8 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #1a1a1a;
-      border-top: 2px solid #6a0dad;
+      background-color: #4c1158;
+      border-top: 2px solid #d8c4f0;
       padding: 20px;
       box-shadow: 0 -2px 10px rgba(255,255,255,0.2);
       z-index: 999;
@@ -135,13 +136,13 @@
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
-      background-color: #000000;
+      background-color: #3b0a45;
       color: #ffffff;
     }
 
     .form-popup button {
-      background-color: #6a0dad;
-      color: white;
+      background-color: #d8c4f0;
+      color: #3b0a45;
       padding: 10px 20px;
       border: none;
       border-radius: 6px;
@@ -150,11 +151,11 @@
     }
 
     footer {
-      background-color: #000000;
+      background-color: #3b0a45;
       text-align: center;
       padding: 20px;
       font-size: 14px;
-      color: #cccccc;
+      color: #d8c4f0;
       margin-top: 40px;
     }
   </style>
@@ -168,13 +169,13 @@
   <div class="hero">
     <div class="chicken">🐔</div>
     <button class="cta-button" onclick="openForm('Gavran Eggs (30 Pack)')">📦 Order on WhatsApp</button>
-    <h2 style="color:#6a0dad;">India’s Trusted Source for Gavran Eggs</h2>
+    <h2 style="color:#d8c4f0;">India’s Trusted Source for Gavran Eggs</h2>
     <p>Fresh, nutritious, and delivered with care. ₹350 for 30 eggs—limited time offer!</p>
     <img src="farm1.jpg" alt="Farm Image">
   </div>
 
   <section class="section">
-    <h3 style="color:#6a0dad;">Our Products</h3>
+    <h3 style="color:#d8c4f0;">Our Products</h3>
     <div class="product-grid">
 
       <div class="product-card">
@@ -207,7 +208,7 @@
   </section>
 
   <div class="form-popup" id="orderForm">
-    <h3 style="color:#6a0dad;">Place Your Order</h3>
+    <h3 style="color:#d8c4f0;">Place Your Order</h3>
     <input type="text" id="product" placeholder="Product" readonly>
     <input type="number" id="quantity" placeholder="Quantity (e.g. 30)">
     <input type="text" id="area" placeholder="Delivery Area">
@@ -238,9 +239,4 @@
 
       const message = `Hi Kaushalya Desi Eggs! I want to order ${quantity} of ${product}. Delivery area: ${area}`;
       const url = `https://wa.me/918767405835?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
-    }
-  </script>
-
-</body>
-</html>
+      window
