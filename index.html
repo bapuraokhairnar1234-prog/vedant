@@ -25,12 +25,14 @@
       font-size: 2.5em;
       color: #f5b400;
       text-shadow: 0 0 20px #f5b400;
+      animation: glow 2s infinite alternate;
     }
 
     header p {
       font-size: 1.1em;
       color: #ccc;
       margin-top: 10px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .container {
@@ -79,6 +81,7 @@
     button:hover {
       background: #ffcc33;
       transform: scale(1.05);
+      box-shadow: 0 0 15px #f5b400;
     }
 
     input {
@@ -98,17 +101,7 @@
       color: #888;
       background: #0a0a0a;
       margin-top: 50px;
-    }
-
-    footer a {
-      color: #f5b400;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    footer a:hover {
-      color: #ffcc33;
+      animation: fadeIn 2s ease;
     }
 
     .founder {
@@ -118,6 +111,7 @@
       margin-top: 50px;
       text-align: center;
       box-shadow: 0 0 20px rgba(255,255,255,0.05);
+      animation: fadeUp 1.5s ease;
     }
 
     .founder img {
@@ -126,11 +120,24 @@
       border-radius: 50%;
       border: 2px solid #f5b400;
       margin-bottom: 15px;
+      animation: bounce 3s infinite;
     }
 
     .founder h2 {
       color: #f5b400;
       margin-bottom: 10px;
+    }
+
+    a.about-link {
+      color: #f5b400;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    a.about-link:hover {
+      color: #ffcc33;
+      text-shadow: 0 0 10px #f5b400;
     }
 
     @keyframes fadeIn {
@@ -141,6 +148,16 @@
     @keyframes fadeUp {
       from {opacity: 0; transform: translateY(30px);}
       to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #f5b400; }
+      to { text-shadow: 0 0 25px #ffcc33; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     @media (max-width: 768px) {
@@ -188,14 +205,15 @@
   </div>
 
   <footer>
-    <a href="about.html">About Us</a> | © 2025 Kaushalya Desi Farm | All rights reserved.
+    © 2025 Kaushalya Desi Farm | All rights reserved. <br>
+    <a href="about.html" class="about-link">About Us</a>
   </footer>
 
   <script>
     function orderNow(type) {
-      const phone = "918767405835"; // WhatsApp number (with country code)
-      const eggQty = document.getElementById('eggQty').value || 0;
-      const meatQty = document.getElementById('meatQty').value || 0;
+      const phone = "918767405835"; // with country code
+      const eggQty = document.getElementById('eggQty').value;
+      const meatQty = document.getElementById('meatQty').value;
       let message = "Hello, I'd like to place an order: ";
 
       if (type === 'eggs' && eggQty > 0) {
